@@ -129,5 +129,53 @@ class SarClient
         $this->client_admin_level = $sessionInfo["adminLevel"];
     }
 
+    public function isAuthed()
+    {
+        $response = $this->check_session($this->client_session_id, $this->client_user_id);
+
+        if ($response["status"] == "OK") {
+            return $response["sessionInfo"];
+        }
+
+        return null;
+    }
+
+    public function logout()
+    {
+        if (isset($_COOKIE["stored_session_id"])) {
+            unset($_COOKIE["stored_session_id"]);
+            setcookie("stored_session_id", null, -1);
+        }
+        if (isset($_COOKIE["stored_user_id"])) {
+            unset($_COOKIE["stored_user_id"]);
+            setcookie("stored_user_id", null, -1);
+        }
+        session_destroy();
+
+    }
+
+    /**
+     * @return int
+     */
+    public function getClientAdminLevel(): int
+    {
+        return $this->client_admin_level;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getClientUserId()
+    {
+        return $this->client_user_id;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getClientSessionId()
+    {
+        return $this->client_session_id;
+    }
 
 }
