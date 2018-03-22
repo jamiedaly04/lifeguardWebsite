@@ -49,7 +49,7 @@
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
                 <li class="navs"><a href="/index.php"><span class="glyphicon glyphicon-home"></span></a></li>
-                <li><a href="/safety.html">Safety Information</a></li>
+                <li><a href="/safety.php">Safety Information</a></li>
                 <li><a href="/lifeguards.php">Our Lifeguards</a></li>
                 <li><a href="/app.php">Our App</a></li>
                 <li><a href="/contact.php">Contact Us</a></li>
