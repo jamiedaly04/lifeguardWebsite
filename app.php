@@ -26,7 +26,7 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-default navbar-fixed-top">
+     <nav class="navbar navbar-default navbar-fixed-top">
          <a class="navbar-brand"><span><img src="img/128x128.png" id="logo"  alt="Lifesaver logo"></span>Lifeguard Search &amp; Rescue</a>
       <div class="container">
         <div class="navbar-header">
@@ -39,11 +39,11 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="navs"><a href="index.html"><span class="glyphicon glyphicon-home"></span></a></li>
+            <li class="navs"><a href="index.php"><span class="glyphicon glyphicon-home"></span></a></li>
             <li><a href="safety.html">Safety Information</a></li>
-            <li><a href="lifeguards.html">Our Lifeguards</a></li>
-            <li><a href="app.html">Our App</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="lifeguards.php">Our Lifeguards</a></li>
+            <li><a href="app.php">Our App</a></li>
+            <li><a href="contact.php">Contact Us</a></li>
           </ul>
             <ul class="nav navbar-nav navbar-right">
                  <li class="navs" ><a href="#" role="button" data-toggle="modal" data-target="#login-modal"><span class="glyphicon glyphicon-user"></span> My Account</a></li>
@@ -51,33 +51,44 @@
         </div><!--/.nav-collapse -->
       </div>
     </nav>
-
-    <div class="cover">
-        <div class="cover-text">
-            <h1>Welcome to Lifeguard Search &amp; Rescue!</h1>
-            <p>The website and app dedicated to keeping beachgoers safe at the seaside, we provide a platform that enhances lifeguards vision across the coast. Download our app now for details about how you can stay safe and protect yourself with our new location tracking app.  </p>
-            
-        </div>
-    </div>
-      
+<div id="background">
     <div class="cover2">
          <div class="cover-text2">
-          <div class="col-sm-4" id="surf-tab">
-              <h2>Beach Hazards &amp; Safety Information</h2> <p3>For more information about how to stay safe from harsh beach weather conditions such as rip currents, pesky beach wildlife or for medical treatment information click here! </p3>
-        
-          </div>
-        <div class="col-sm-4" id="app-tab">
-            <h2>Our App</h2>
-            <p3>Click here to download our new beach safety app!</p3>
-        </div>
-            <div class="col-sm-4" id="life-tab">
-                <h2>Our Lifeguards</h2>
-                <p3>Meet some of our amazing lifeguards who have years of experience at providing the best support for people attending the beach. In the last year almost 200 lives were saved by lifeguards alone across the country, so take some time to learn about our incredible staff! </p3>
-        </div>    
-      </div>
-</div>
+        <div class="col-sm-6" id="app-back">
+            <h4>Avaliable on Google Playstore and Apple's App Store Soon!</h4>
+            <br>
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+      </ol>
 
-  
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner">
+        <div class="item active">
+          <img src="img/scrnshot1.PNG" alt="Los Angeles">
+        </div>
+
+        <div class="item">
+          <img src="img/screnshot2.PNG" alt="Chicago">
+          </div>
+      </div>
+
+      <!-- Left and right controls -->
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+        </div>
+        </div>       
+        </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  </div> 
     <footer class="footer">
    
          <div>
@@ -88,7 +99,7 @@
 </footer>
       
       
-<!-- BEGIN # MODAL LOGIN -->
+<!-- BEGIN LOGIN -->
 <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
     	<div class="modal-dialog">
 			<div class="modal-content">
@@ -139,7 +150,7 @@
                             </div>
                             <div>
                                 <button id="lost_login_btn" type="button" class="btn btn-link">Log In</button>
-
+                                <button id="lost_register_btn" type="button" class="btn btn-link">Register</button>
                             </div>
 		    		    </div>
                     </form>

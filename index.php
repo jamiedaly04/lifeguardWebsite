@@ -6,19 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
     <title>Lifeguard Home</title>
 
     <!-- Bootstrap core CSS -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
       <link href="bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
-        <script src="form.js"></script>
 
     <!-- Custom styles for this template -->
-    <link href="style.css" rel="stylesheet">
-        <link href="styles.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
     <link href="index.css" rel="stylesheet">
     <link href="loginbtn.css" rel="stylesheet">
-  <!--<a href="https://www.freepik.com/free-photos-vectors/background">Background vector created by Kjpargeter - Freepik.com</a>-->
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -26,8 +24,9 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-<body>
-     <nav class="navbar navbar-default navbar-fixed-top">
+
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top">
          <a class="navbar-brand"><span><img src="img/128x128.png" id="logo"  alt="Lifesaver logo"></span>Lifeguard Search &amp; Rescue</a>
       <div class="container">
         <div class="navbar-header">
@@ -40,11 +39,11 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="navs"><a href="index.html"><span class="glyphicon glyphicon-home"></span></a></li>
+            <li class="navs"><a href="index.php"><span class="glyphicon glyphicon-home"></span></a></li>
             <li><a href="safety.html">Safety Information</a></li>
-            <li><a href="lifeguards.html">Our Lifeguards</a></li>
-            <li><a href="app.html">Our App</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="lifeguards.php">Our Lifeguards</a></li>
+            <li><a href="app.php">Our App</a></li>
+            <li><a href="contact.php">Contact Us</a></li>
           </ul>
             <ul class="nav navbar-nav navbar-right">
                  <li class="navs" ><a href="#" role="button" data-toggle="modal" data-target="#login-modal"><span class="glyphicon glyphicon-user"></span> My Account</a></li>
@@ -52,29 +51,33 @@
         </div><!--/.nav-collapse -->
       </div>
     </nav>
-    <div id="background2">
-           <div id="content-main4">
-             <h3>Our Lifeguards</h3>
-                    <hr>
-                    <p3>Warren Young - Chief Lifeguard</p3>
-                        <img src="img/lifeguard-1.jpg" alt="Man's face" class="img-circle"><br><br>
-                        <p5>Warren Young was employed by Merseyside Beach Patrol as a professional lifeguard in 1973 and was stationed at Formby Beach. In 1975 he was promoted to Chief Lifeguard and has now held the position for 41 years. Now one of the City's longest serving employees, Warren is responsible for facilitating beach safety along a 52 kilometre coastal strip.</p5>
-                <br>
-                <br>
-                <hr>
-                    <p3>Lauren Jones - Beach Patrol</p3>
-                    <img src="img/lg_0.png" alt="Woman's face" class="img-circle"><br><br>
-                    <p5>Lauren Jones is a new employee at St Ives beach in Cornwall, however she has proved herself a worthy employee at the seaside, having rescued 3 people at the seaside since starting in December 2017. She has long term plans to work alongside senior staff and plans to become a Chief Lifeguard as soon as possible, and with her commitment we believe she'll make it in no time!</p5>
-                <br>
-                <hr>
-                    <p3>Michael Todd - Beach Patrol</p3>
-                    <img src="img/lifeGuard-2.jpg" alt="Woman's face" class="img-circle"><br><br>
-                    <p5>Michael Todd has spent the past 4 years working at the beautiful coast of Prestatyn, Wales. He grew up with the dream of becoming a lifeguard and was trained up within months of finishing his education, he is now an established member of the team and thrives on helping people at the seaside.</p5>
-                <br>
-                <br>
-                </div>
-    <br><br><br><br><br>
+
+    <div class="cover">
+        <div class="cover-text">
+            <h1>Welcome to Lifeguard Search &amp; Rescue!</h1>
+            <p>The website and app dedicated to keeping beachgoers safe at the seaside, we provide a platform that enhances lifeguards vision across the coast. Download our app now for details about how you can stay safe and protect yourself with our new location tracking app.  </p>
+            
         </div>
+    </div>
+      
+    <div class="cover2">
+         <div class="cover-text2">
+          <div class="col-sm-4" id="surf-tab">
+              <h2>Beach Hazards &amp; Safety Information</h2> <p3>For more information about how to stay safe from harsh beach weather conditions such as rip currents, pesky beach wildlife or for medical treatment information click here! </p3>
+        
+          </div>
+        <div class="col-sm-4" id="app-tab">
+            <h2>Our App</h2>
+            <p3>Click here to download our new beach safety app!</p3>
+        </div>
+            <div class="col-sm-4" id="life-tab">
+                <h2>Our Lifeguards</h2>
+                <p3>Meet some of our amazing lifeguards who have years of experience at providing the best support for people attending the beach. In the last year almost 200 lives were saved by lifeguards alone across the country, so take some time to learn about our incredible staff! </p3>
+        </div>    
+      </div>
+</div>
+
+  
     <footer class="footer">
    
          <div>
@@ -83,7 +86,7 @@
         
    
 </footer>
-
+      
       
 <!-- BEGIN # MODAL LOGIN -->
 <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
@@ -100,7 +103,7 @@
                 <div id="div-forms">
                 
                     <!-- Begin # Login Form -->
-                    <form id="login-form">
+                    <form id="login-form" action="login.php">
 		                <div class="modal-body">
 				    		<input id="login_username" class="form-control" type="text" placeholder="Email" required>
 				    		<input id="login_password" class="form-control" type="password" placeholder="Password" required>
@@ -116,7 +119,6 @@
                             </div>
 				    	    <div>
                                 <button id="login_lost_btn" type="button" class="btn btn-link">Lost Password?</button>
-
                             </div>
 				        </div>
                     </form>
@@ -137,7 +139,7 @@
                             </div>
                             <div>
                                 <button id="lost_login_btn" type="button" class="btn btn-link">Log In</button>
-                                <button id="lost_register_btn" type="button" class="btn btn-link">Register</button>
+
                             </div>
 		    		    </div>
                     </form>
@@ -180,4 +182,7 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
-    </body>
+  </body>
+</html>
+
+

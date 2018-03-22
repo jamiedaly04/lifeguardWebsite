@@ -46,9 +46,12 @@ class FormHandler
 
 		$host = isset($_SERVER['SERVER_NAME'])?$_SERVER['SERVER_NAME']:'localhost';
         $from_email ='forms@'.$host;
-   		$this->mailer->setFrom($from_email,'Contact Form',false);  
+        try {
+            $this->mailer->setFrom($from_email, 'Contact Form', false);
+        } catch (\phpmailerException $e) {
+        }
 
-   		$this->captcha = false;   
+        $this->captcha = false;
 
    		$this->attachments = [];
 
@@ -111,7 +114,7 @@ class FormHandler
 	{
 		$this->recaptcha = new ReCaptchaValidator();
 		$this->recaptcha->enable(true);
-		if($config_fn)
+		if($config_fn != null)
 		{
 			$config_fn($this->recaptcha);	
 		}
