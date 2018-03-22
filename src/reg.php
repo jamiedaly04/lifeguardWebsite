@@ -3,7 +3,5 @@
  * Created by PhpStorm.
  * User: shane
  * Date: 3/22/18
- * Time: 4:20 PM
+ * Time: 6:26 PM
  */
-
-phpinfo();

@@ -5,6 +5,7 @@
  * Date: 3/22/18
  * Time: 4:41 PM
  */
+require_once "setup_session.php"
 
 ?>
 
@@ -36,10 +37,12 @@
 </head>
 <body>
 <nav class="navbar navbar-default navbar-fixed-top">
-    <a class="navbar-brand"><span><img src="/img/128x128.png" id="logo"  alt="Lifesaver logo"></span>Lifeguard Search &amp; Rescue</a>
+    <a class="navbar-brand"><span><img src="/img/128x128.png" id="logo" alt="Lifesaver logo"></span>Lifeguard Search
+        &amp; Rescue</a>
     <div class="container">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -55,7 +58,8 @@
                 <li><a href="/contact.php">Contact Us</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li class="navs" ><a href="#" role="button" data-toggle="modal" data-target="#login-modal"><span class="glyphicon glyphicon-user"></span> My Account</a></li>
+                <li class="navs"><a href="#" role="button" data-toggle="modal" data-target="#login-modal"><span
+                                class="glyphicon glyphicon-user"></span> My Account</a></li>
             </ul>
         </div><!--/.nav-collapse -->
     </div>

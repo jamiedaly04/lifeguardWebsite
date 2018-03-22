@@ -33,19 +33,19 @@
             <div id="div-forms">
 
                 <!-- Begin # Login Form -->
-                <form id="login-form">
+                <form id="login-form" action="/src/login.php" method="post">
                     <div class="modal-body">
-                        <input id="login_username" class="form-control" type="text" placeholder="Email" required>
-                        <input id="login_password" class="form-control" type="password" placeholder="Password" required>
+                        <input id="login_username" class="form-control" type="text" placeholder="Email" name="username" required>
+                        <input id="login_password" class="form-control" type="password" placeholder="Password" name="password" required>
                         <div class="checkbox">
                             <label>
-                                <input type="checkbox"> Remember me
+                                <input type="checkbox" name="remember-me"> Remember me
                             </label>
                         </div>
                     </div>
                     <div class="modal-footer">
                         <div>
-                            <button type="submit" class="btn btn-primary btn-lg btn-block">Login</button>
+                            <input type="submit" class="btn btn-primary btn-lg btn-block" value="Login">
                         </div>
                         <div>
                             <button id="login_lost_btn" type="button" class="btn btn-link">Lost Password?</button>
@@ -56,7 +56,7 @@
                 <!-- End # Login Form -->
 
                 <!-- Begin | Lost Password Form -->
-                <form id="lost-form" style="display:none;">
+                <form id="lost-form" style="display:none;" action="/src/forgotpassword.php" method="post">
                     <div class="modal-body">
                         <div id="div-lost-msg">
                             <div id="icon-lost-msg" class="glyphicon glyphicon-chevron-right"></div>
@@ -78,7 +78,7 @@
                 <!-- End | Lost Password Form -->
 
                 <!-- Begin | Register Form -->
-                <form id="register-form" style="display:none;">
+                <form id="register-form" style="display:none;" action="/src/register.php" method="post">
                     <div class="modal-body">
                         <div id="div-register-msg">
                             <div id="icon-register-msg" class="glyphicon glyphicon-chevron-right"></div>
@@ -95,7 +95,7 @@
                             <button type="submit" class="btn btn-primary btn-lg btn-block">Register</button>
                         </div>
                         <div>
-                            <button id="register_login_btn" type="button" class="btn btn-link">Log In</button>
+                            <button id="register_login_btn" type="submit" class="btn btn-link">Log In</button>
                             <button id="register_lost_btn" type="button" class="btn btn-link">Lost Password?</button>
                         </div>
                     </div>
