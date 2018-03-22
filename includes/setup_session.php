@@ -1,6 +1,7 @@
 <?php
+set_include_path(get_include_path() . PATH_SEPARATOR . "/var/www/html/includes/");
 
-include "../includes/SarClient.php";
+include "SarClient.php";
 session_start();
 
 $_SESSION["sarClient"] = new SarClient("http://sar-master.valaria.pw:8080");
